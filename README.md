@@ -21,4 +21,4 @@
 
 浏览器通过 ESM 的方式加载JS文件，类似我们本地使用ES6 的 ESM 方式开发 Webpack 等打包工具均可以理解我们的意图，浏览器现在也可以直接理解 ESM 规范的JS文件了，同时支持同步ESM模块和异步ESM模块。详细请看：[在浏览器中使用 ECMAScript Modules](https://juejin.cn/post/6943233321765715976)，这位大佬已经写的很好了
 
-学以致用：[demos](https://github.com/swdenglian/vite-demos)
+学以致用：[vite-demos->packages/hello-esm](https://github.com/swdenglian/vite-demos)
