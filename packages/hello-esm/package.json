@@ -1,0 +1,14 @@
+{
+  "name": "@vite-demos/hello-esm",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "http-server -p 8001 ./src ",
+    "open": "open 'http://localhost:8001'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "vite-demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "esm:dev": "pnpm --filter '@vite-demos/hello-esm' dev",
+    "esm:open": "pnpm --filter '@vite-demos/hello-esm' open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
