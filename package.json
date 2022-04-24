@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "esm:dev": "pnpm --filter '@vite-demos/hello-esm' dev",
-    "esm:open": "pnpm --filter '@vite-demos/hello-esm' open"
+    "hesm:dev": "pnpm --filter '@vite-demos/hello-esm' dev",
+    "hesm:open": "pnpm --filter '@vite-demos/hello-esm' open",
+    "hvite:dev": "pnpm --filter '@vite-demos/hello-vite' dev",
+    "hvite:build": "pnpm --filter '@vite-demos/hello-vite' build"
   },
   "author": "",
   "license": "ISC",
