@@ -1,5 +1,7 @@
+import { isUndefined } from 'lodash';
+
 export const hello = (msg: string) => {
-  console.log(msg);
+  console.log(msg,isUndefined(undefined));
 };
 
 export const addHelloInBody = () => {

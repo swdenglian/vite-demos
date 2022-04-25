@@ -1,0 +1,90 @@
+{
+	"name": "hello-wp2vite",
+	"version": "0.1.0",
+	"title": "TypeScript-Vue-Webpack BoilerPlate",
+	"description": "NodeJS Web application server boilerplate with TypeScript and VueJS",
+	"scripts": {
+		"prebuild": "prettier --write \"src/**/*.ts\"",
+		"build": "tsc",
+		"build:client": "gulp client",
+		"format": "prettier --write \"src/**/*.ts\" \"config/*.js\" \"config/*.ts\"",
+		"start:client": "ts-node config/devServer.ts",
+		"start:dev": "nodemon",
+		"prod": "cross-env NODE_ENV=production gulp && node dist/server/main",
+		"wp2vite": "wp2vite --config=./webpack.config.js",
+		"dev": "vite",
+		"start": "vite",
+		"preview": "vite preview",
+		"vite-build": "vite build"
+	},
+	"dependencies": {
+		"@nestjs/common": "7.0.9",
+		"@nestjs/core": "7.0.9",
+		"@nestjs/platform-express": "7.0.9",
+		"@nestjs/serve-static": "2.1.0",
+		"core-js": "3.6.4",
+		"jaeger-client": "3.18.0",
+		"prom-client": "12.0.0",
+		"reflect-metadata": "0.1.13",
+		"rxjs": "6.5.4"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "8.3.5",
+		"@commitlint/config-angular": "8.3.4",
+		"@vue/cli-plugin-babel": "4.4.1",
+		"@vue/cli-plugin-eslint": "4.4.1",
+		"@vue/cli-service": "4.4.1",
+		"@vue/eslint-config-standard": "5.1.2",
+		"@vue/eslint-config-typescript": "5.0.2",
+		"awesome-typescript-loader": "5.2.1",
+		"babel-eslint": "10.1.0",
+		"cross-env": "7.0.2",
+		"eslint": "7.1.0",
+		"eslint-loader": "4.0.2",
+		"eslint-plugin-vue": "6.2.2",
+		"friendly-errors-webpack-plugin": "1.7.0",
+		"gulp": "4.0.2",
+		"gulp-typescript": "6.0.0-alpha.1",
+		"html-webpack-plugin": "4.3.0",
+		"husky": "4.2.3",
+		"koa-webpack-dev-middleware": "2.0.2",
+		"koa-webpack-hot-middleware": "1.0.3",
+		"lint-staged": "10.2.9",
+		"nodemon": "2.0.4",
+		"prettier": "2.0.5",
+		"rimraf": "3.0.2",
+		"style-loader": "1.2.1",
+		"ts-loader": "7.0.5",
+		"ts-node": "8.10.2",
+		"tsconfig-paths": "3.9.0",
+		"typescript": "3.9.5",
+		"uglifyjs-webpack-plugin": "2.2.0",
+		"url-loader": "4.0.0",
+		"vue": "2.6.11",
+		"vue-loader": "15.9.2",
+		"vue-router": "3.3.2",
+		"vue-template-compiler": "2.6.11",
+		"vuex": "3.4.0",
+		"webpack": "4.43.0",
+		"webpack-cli": "3.3.11",
+		"webpack-dev-middleware": "3.7.2",
+		"webpack-hot-middleware": "2.25.0",
+		"webpack-merge": "4.2.2",
+		"webpack-stream": "5.2.1",
+		"vite": "2",
+		"@vitejs/plugin-legacy": "^1.4.4",
+		"vite-plugin-vue2": "latest"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged",
+			"pre-push": "npm run build -- --noEmit",
+			"commit-msg": "commitlint -c .commitlintrc.json -E HUSKY_GIT_PARAMS"
+		}
+	},
+	"lint-staged": {
+		"src/**/*.{ts}": [
+			"prettier --write"
+		]
+	}
+}

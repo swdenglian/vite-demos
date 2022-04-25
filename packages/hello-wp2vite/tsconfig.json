@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"baseUrl": "./",
+		"module": "commonjs",
+		"strict": true,
+		"jsx": "preserve",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"outDir": "./dist/server",
+		"skipLibCheck": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"downlevelIteration": true,
+		"noImplicitAny": false,
+		"strictNullChecks": false,
+		"allowJs": true,
+		"types": [
+			"node"
+		],
+		"paths": {
+			"*": [
+				"types/*"
+			]
+		}
+	},
+	"include": [
+		"src/server/**/*.ts"
+	],
+	"exclude": [
+		"node_modules",
+		"dist",
+		"src/server/**/*.spec.ts",
+		"src/client/**/*"
+	]
+}
